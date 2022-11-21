@@ -1,0 +1,546 @@
+{
+  "description": "SunSpec Fronius M21X Meter",
+  "devicefields": [
+    {
+      "name": "SID",
+      "offset": 40000,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "",
+      "note": "Well-known value. Uniquely identifies this as a SunSpec Modbus Map"
+    },
+    {
+      "name": "ID",
+      "offset": 40002,
+      "count": 1,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "",
+      "note": "Well-known value. Uniquely identifies this as a SunSpec Common Model block"
+    },
+    {
+      "name": "L",
+      "offset": 40003,
+      "count": 1,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "Registers",
+      "note": "Length of Common Model block"
+    },
+    {
+      "name": "Mn",
+      "offset": 40004,
+      "count": 16,
+      "register": 3,
+      "type": "STRING",
+      "unit": "",
+      "note": "Manufacturer"
+    },
+    {
+      "name": "Md",
+      "offset": 40020,
+      "count": 16,
+      "register": 3,
+      "type": "STRING",
+      "unit": "",
+      "note": "Device model"
+    },
+    {
+      "name": "Opt",
+      "offset": 40036,
+      "count": 8,
+      "register": 3,
+      "type": "STRING",
+      "unit": "",
+      "note": "Options"
+    },
+    {
+      "name": "Vr",
+      "offset": 40044,
+      "count": 8,
+      "register": 3,
+      "type": "STRING",
+      "unit": "",
+      "note": "SW version of meter"
+    },
+    {
+      "name": "SN",
+      "offset": 40052,
+      "count": 16,
+      "register": 3,
+      "type": "STRING",
+      "unit": "",
+      "note": "Serialnumber of the meter"
+    },
+    {
+      "name": "DA",
+      "offset": 40068,
+      "count": 1,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "",
+      "note": "Modbus Device Address"
+    },
+    {
+      "name": "ID",
+      "offset": 40069,
+      "count": 1,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "",
+      "note": "Uniquely identifies this as a SunSpec Meter Modbus Map (float); 211: single phase, 212: split phase, 213: three phase"
+    },
+    {
+      "name": "L",
+      "offset": 40070,
+      "count": 1,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "Registers",
+      "note": "Length of inverter model block"
+    },
+    {
+      "name": "A",
+      "offset": 40071,
+      "count": 2,
+      "register": 3,
+      "type": "U16_BIG_ENDIAN",
+      "unit": "A",
+      "note": "AC Total Current value"
+    },
+    {
+      "name": "AphA",
+      "offset": 40073,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "A",
+      "note": "AC Phase-A Current value"
+    },
+    {
+      "name": "AphB",
+      "offset": 40075,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "A",
+      "note": "AC Phase-B Current value"
+    },
+    {
+      "name": "AphC",
+      "offset": 40077,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "A",
+      "note": "AC Phase-C Current value"
+    },
+        {
+      "name": "PhV",
+      "offset": 40079,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Average Phase-to-neutral value"
+    },
+    {
+      "name": "PhVphA",
+      "offset": 40081,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-A-to-neutral value"
+    },
+    {
+      "name": "PhVphB",
+      "offset": 40083,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-B-to-neutral value"
+    },
+    {
+      "name": "PhVphC",
+      "offset": 40085,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-C-to-neutral value"
+    },
+    {
+      "name": "PPV",
+      "offset": 40087,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Average Phase-to-phase value"
+    },
+    {
+      "name": "PPVphAB",
+      "offset": 40089,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-AB value"
+    },
+    {
+      "name": "PPVphBC",
+      "offset": 40091,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-BC value"
+    },
+    {
+      "name": "PPVphCA",
+      "offset": 40093,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "V",
+      "note": "AC Voltage Phase-CA value"
+    },
+    {
+      "name": "Hz",
+      "offset": 40095,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "Hz",
+      "note": "AC Frequency value"
+    },
+    {
+      "name": "W",
+      "offset": 40097,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "W",
+      "note": "AC Power value"
+    },
+    {
+      "name": "WphA",
+      "offset": 40099,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "W",
+      "note": "AC Power Phase A value"
+    },
+    {
+      "name": "WphB",
+      "offset": 40101,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "W",
+      "note": "AC Power Phase B value"
+    },
+    {
+      "name": "WphC",
+      "offset": 40103,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "W",
+      "note": "AC Power Phase C value"
+    },
+    {
+      "name": "VA",
+      "offset": 40105,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VA",
+      "note": "AC Apparent Power value"
+    },
+    {
+      "name": "VAphA",
+      "offset": 40107,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VA",
+      "note": "AC Apparent Power Phase A value"
+    },
+    {
+      "name": "VAphB",
+      "offset": 40109,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VA",
+      "note": "AC Apparent Power Phase B value"
+    },
+    {
+      "name": "VAphC",
+      "offset": 40111,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VA",
+      "note": "AC Apparent Power Phase C value"
+    },
+    {
+      "name": "VAR",
+      "offset": 40113,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VAr",
+      "note": "AC Reactive Power value"
+    },
+    {
+      "name": "VARphA",
+      "offset": 40115,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VAr",
+      "note": "AC Reactive Power Phase A value"
+    },
+    {
+      "name": "VARphB",
+      "offset": 40117,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VAr",
+      "note": "AC Reactive Power Phase B value"
+    },
+    {
+      "name": "VARphC",
+      "offset": 40119,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "VAr",
+      "note": "AC Reactive Power Phase C value"
+    },
+    {
+      "name": "PF",
+      "offset": 40121,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "cos()",
+      "note": "Power Factor value"
+    },
+    {
+      "name": "PFphA",
+      "offset": 40123,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "cos()",
+      "note": "Power Factor Phase A value"
+    },
+    {
+      "name": "PFphB",
+      "offset": 40125,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "cos()",
+      "note": "Power Factor Phase B value"
+    },
+    {
+      "name": "PFphC",
+      "offset": 40127,
+      "count": 2,
+      "register": 3,
+      "type": "FLOAT_BIG_ENDIAN",
+      "unit": "cos()",
+      "note": "Power Factor Phase C value"
+    },
+    {
+      "name": "TotWhExp",
+      "offset": 40129,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Exported"
+    },
+    {
+      "name": "TotWhExpPhA",
+      "offset": 40131,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Exported phase A"
+    },
+    {
+      "name": "TotWhExpPhB",
+      "offset": 40133,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Exported phase B"
+    },
+        {
+      "name": "TotWhExpPhC",
+      "offset": 40135,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Exported phase C"
+    },
+    {
+      "name": "TotWhImp",
+      "offset": 40137,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Imported"
+    },
+    {
+      "name": "TotWhImpPhA",
+      "offset": 40139,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Imported phase A"
+    },
+    {
+      "name": "TotWhImpPhB",
+      "offset": 40141,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Imported phase B"
+    },
+    {
+      "name": "TotWhImpPhC",
+      "offset": 40143,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "Wh",
+      "note": "Total Watt-hours Imported phase C"
+    },
+    {
+      "name": "TotVAhExp",
+      "offset": 40145,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Exported"
+    },
+    {
+      "name": "TotVAhExpPhA",
+      "offset": 40147,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAWh",
+      "note": "Total VA-hours Exported phase A"
+    },
+    {
+      "name": "TotVAhExpPhB",
+      "offset": 40149,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Exported phase B"
+    },
+        {
+      "name": "TotVAhExpPhC",
+      "offset": 40151,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Exported phase C"
+    },
+    {
+      "name": "TotVAhImp",
+      "offset": 40153,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Imported"
+    },
+    {
+      "name": "TotVAhImpPhA",
+      "offset": 40155,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Imported phase A"
+    },
+    {
+      "name": "TotVAhImpPhB",
+      "offset": 40157,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Imported phase B"
+    },
+    {
+      "name": "TotVAhImpPhC",
+      "offset": 40159,
+      "count": 2,
+      "register": 3,
+      "type": "U32_BIG_ENDIAN",
+      "unit": "VAh",
+      "note": "Total VA-hours Imported phase C"
+    }
+  ],
+  "databasefields": [
+    {
+      "tablename": "Meter",
+      "columnname": "Wirkleistung",
+      "columntype": "FLOAT_BIG_ENDIAN",
+      "sourcetype": "RESULTFIELD",
+      "sourcevalue": "W"
+    },
+    {
+      "tablename": "Meter",
+      "columnname": "Scheinleistung",
+      "columntype": "FLOAT_BIG_ENDIAN",
+      "sourcetype": "RESULTFIELD",
+      "sourcevalue": "VA"
+    },
+    {
+      "tablename": "Meter",
+      "columnname": "Blindleistung",
+      "columntype": "FLOAT_BIG_ENDIAN",
+      "sourcetype": "RESULTFIELD",
+      "sourcevalue": "VAR"
+    },
+    {
+      "tablename": "Meter",
+      "columnname": "EnergieProduziert",
+      "columntype": "FLOAT_BIG_ENDIAN",
+      "sourcetype": "RESULTFIELD",
+      "sourcevalue": "TotWhExp"
+    }
+    {
+      "tablename": "Meter",
+      "columnname": "EnergieVerbraucht",
+      "columntype": "FLOAT_BIG_ENDIAN",
+      "sourcetype": "RESULTFIELD",
+      "sourcevalue": "TotWhImp"
+    }
+  ]
+}
