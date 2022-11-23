@@ -545,14 +545,14 @@
     {
       "tablename": "Meter",
       "columnname": "Einspeisung",
-      "columntype": "NUMBER",
+      "columntype": "FLOAT_BIG_ENDIAN",
       "sourcetype": "CALCULATED",
       "sourcevalue": "MIN(0,W)*(-1)"
     },
     {
       "tablename": "Meter",
       "columnname": "Bezug",
-      "columntype": "NUMBER",
+      "columntype": "FLOAT_BIG_ENDIAN",
       "sourcetype": "CALCULATED",
       "sourcevalue": "MAX(0,W)"
     }
